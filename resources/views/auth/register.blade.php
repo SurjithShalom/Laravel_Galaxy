@@ -13,7 +13,7 @@
                             @csrf
                             <div class="form-group mb-3">
                                 <input type="text" placeholder="Name" id="name" class="form-control" name="name"
-                                    required autofocus>
+                                    required autofocus value="{{old('name')}}">
                                 @if ($errors->has('name'))
                                 <span class="text-danger">{{ $errors->first('name') }}</span>
                                 @endif
@@ -21,7 +21,7 @@
 
                             <div class="form-group mb-3">
                                 <input type="text" placeholder="Email" id="email_address" class="form-control"
-                                    name="email" required autofocus>
+                                    name="email" required autofocus value="{{ old('email')}}">
                                 @if ($errors->has('email'))
                                 <span class="text-danger">{{ $errors->first('email') }}</span>
                                 @endif
